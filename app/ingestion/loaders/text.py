@@ -1,13 +1,12 @@
 import logfire
 
-def parse_text(file_path: str):
-    """
-    Parses plain text files.
-    """
-    with logfire.span("📄 Text Parsing", filename=file_path):
+
+def parse_text(file_path: str) -> str:
+    """Read a UTF-8 plain-text file."""
+    with logfire.span("Text Parsing", filename=file_path):
         try:
-            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-                return f.read()
-        except Exception as e:
-            logfire.error(f"❌ Text Parse Failed: {e}")
-            raise e
+            with open(file_path, "r", encoding="utf-8") as file:
+                return file.read()
+        except Exception:
+            logfire.exception("Text parse failed")
+            raise
