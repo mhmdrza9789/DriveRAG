@@ -6,6 +6,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 ENV_PATH = PROJECT_ROOT / ".env"
 
+PROJECT_DATA = PROJECT_ROOT / "DATA"
+
 load_dotenv(dotenv_path=ENV_PATH, override=True)
 
 class Settings:
@@ -40,6 +42,6 @@ class Settings:
     # --- CHUNCKING SETTING ---
     CHUNK_SIZE = 800
     CHUNK_OVERLAP = 120
-
+    BATCH_SIZE = 2
     
 settings = Settings()
