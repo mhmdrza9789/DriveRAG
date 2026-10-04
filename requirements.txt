@@ -16,6 +16,7 @@ langchain-core>=0.3,<1.0
 langchain-community>=0.3,<1.0
 langgraph>=0.2,<1.0
 langsmith>=0.1,<1.0
+langchain-groq
 
 # Gemini API: chat models and embeddings
 google-genai>=1.0,<2.0

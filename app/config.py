@@ -43,5 +43,9 @@ class Settings:
     CHUNK_SIZE = 800
     CHUNK_OVERLAP = 120
     BATCH_SIZE = 2
+
+    # --- CHAT SETTING ---
+    MAX_HISTORY_MESSAGES = 10
+    MAX_QUERY_LENGTH = 300
     
 settings = Settings()
